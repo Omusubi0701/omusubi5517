@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>オセロ - P2P対戦</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>オセロ - P2P対戦</h1>
+  <div id="board"></div>
+  <div class="info">
+    現在の手番: <span id="current-player">黒</span><br>
+    黒: <span id="black-count">2</span> / 白: <span id="white-count">2</span>
+  </div>
+  <div>
+    <button id="restart">再スタート</button>
+  </div>
+  <hr>
+  <h3>接続（SDP手動）</h3>
+  <button id="createOffer">createOffer</button>
+  <button id="createAnswer">createAnswer</button>
+  <button id="setRemote">setRemote</button>
+  <textarea id="sdpIn" rows="5" placeholder="ここに相手のSDPを貼り付け"></textarea>
+  <textarea id="sdpOut" rows="5" readonly placeholder="このSDPを相手に送ってください"></textarea>
+
+  <div id="chatLog"></div>
+  <input id="chatInput" type="text" placeholder="チャットを入力...">
+  <button id="chatSend">送信</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

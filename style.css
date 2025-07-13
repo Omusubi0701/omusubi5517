@@ -1,65 +1,96 @@
 body {
   font-family: sans-serif;
+  background: #f0f0f0;
+  padding: 20px;
   text-align: center;
 }
 
-#board {
+h1 {
+  margin-bottom: 10px;
+}
+
+.board {
   display: grid;
   grid-template-columns: repeat(8, 50px);
   grid-template-rows: repeat(8, 50px);
   gap: 2px;
-  justify-content: center;
   margin: 20px auto;
+  background-color: #006400;
+  padding: 4px;
+  border: 3px solid #333;
+  width: max-content;
 }
 
 .cell {
   width: 50px;
   height: 50px;
-  background-color: green;
-  position: relative;
+  background-color: #2e8b57;
   cursor: pointer;
+  position: relative;
 }
 
 .disc {
-  width: 90%;
-  height: 90%;
+  width: 80%;
+  height: 80%;
   border-radius: 50%;
   position: absolute;
-  top: 5%;
-  left: 5%;
+  top: 10%;
+  left: 10%;
 }
 
-.black {
-  background: black;
+.disc.black {
+  background-color: black;
 }
 
-.white {
-  background: white;
-  border: 1px solid black;
+.disc.white {
+  background-color: white;
 }
 
 .info {
-  margin-top: 10px;
+  margin: 10px;
+  font-size: 1.2em;
 }
 
-textarea {
-  width: 90%;
-  margin: 5px auto;
-  display: block;
+.connection {
+  margin: 10px auto;
+  max-width: 600px;
 }
 
-#chatLog {
-  max-height: 150px;
-  overflow-y: auto;
-  background: #eee;
-  padding: 10px;
-  margin-top: 10px;
-  width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: left;
-}
-
-input, button {
+.connection textarea {
+  width: 95%;
   margin-top: 5px;
+}
+
+#chat-container {
+  width: 95%;
+  max-width: 600px;
+  margin: 20px auto;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+#chat-log {
+  height: 150px;
+  overflow-y: auto;
+  border: 1px solid #aaa;
+  padding: 5px;
+  margin-bottom: 10px;
+  text-align: left;
+  background: #f9f9f9;
+}
+
+.chat-input-area {
+  display: flex;
+  gap: 5px;
+}
+
+#chat-input {
+  flex: 1;
+  padding: 5px;
+  font-size: 1em;
+}
+
+#chat-send {
+  padding: 5px 10px;
 }

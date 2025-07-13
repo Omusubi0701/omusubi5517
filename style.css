@@ -1,0 +1,65 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(8, 50px);
+  grid-template-rows: repeat(8, 50px);
+  gap: 2px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  background-color: green;
+  position: relative;
+  cursor: pointer;
+}
+
+.disc {
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+.black {
+  background: black;
+}
+
+.white {
+  background: white;
+  border: 1px solid black;
+}
+
+.info {
+  margin-top: 10px;
+}
+
+textarea {
+  width: 90%;
+  margin: 5px auto;
+  display: block;
+}
+
+#chatLog {
+  max-height: 150px;
+  overflow-y: auto;
+  background: #eee;
+  padding: 10px;
+  margin-top: 10px;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+input, button {
+  margin-top: 5px;
+}
